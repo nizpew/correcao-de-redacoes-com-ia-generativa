@@ -1,6 +1,3 @@
-Claro! Aqui está uma versão do README com uma linguagem mais profissional e alinhada ao que o RH e gestores esperam, destacando objetivos, tecnologias e resultados do projeto de forma clara e objetiva:
-
----
 
 # Projeto Correção de Redações com IA Generativa
 
@@ -61,6 +58,17 @@ Desenvolvi uma solução inovadora para automatizar a correção de redações m
 Este projeto demonstra minha capacidade de integrar múltiplas tecnologias modernas para resolver problemas reais com impacto educacional, além de minha atenção a qualidade, usabilidade e escalabilidade.
 
 ---
+
+## Dependências completas:
+
+
+    sudo apt update
+    sudo apt install -y python3 python3-pip python3-venv tesseract-ocr tesseract-ocr-por libsm6 libxext6 libxrender-dev build-essential
+    
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install --upgrade pip
+    pip install flask flask-cors requests python-dotenv pillow pytesseract opencv-python matplotlib tensorflow keras fastai alive-progress glob2 textblob transformers sentencepiece jiwer datasets evaluate accelerate protobuf==3.20.1 tensorboard
 
 
 
