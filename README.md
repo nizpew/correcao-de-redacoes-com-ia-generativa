@@ -75,6 +75,9 @@ Este projeto demonstra minha capacidade de integrar múltiplas tecnologias moder
 
 ## futuras mudancas:
 
+-melhorar OCR (https://github.com/LPBeaulieu/Handwriting-OCR-ScriptReader/tree/main)
+
+
 
 [1] Aluno tira foto da redação (escrita à mão)
        |
