@@ -41,19 +41,20 @@ Desenvolvi uma solução inovadora para automatizar a correção de redações m
 - Documentação clara para facilitar a manutenção e futuras integrações.
 
 
-
-cd project-name
-
-
-cd frontend
-npm install
-npm run dev
-
-
-cd ../backend 
-source venv/bin/activate
-pip install -r requirements.txt            
-python app.py                               
+              
+       cd project-name
+       
+       
+       cd frontend
+       npm install
+       npm run dev
+       
+       
+       cd ../backend 
+       python3 -m venv venv
+       source venv/bin/activate
+       pip install -r requirements.txt            
+       python app.py                               
 
 ---
 
