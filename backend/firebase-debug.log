@@ -1,0 +1,62 @@
+[debug] [2025-05-15T18:41:24.632Z] ----------------------------------------------------------------------
+[debug] [2025-05-15T18:41:24.635Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2025-05-15T18:41:24.635Z] CLI Version:   14.3.1
+[debug] [2025-05-15T18:41:24.636Z] Platform:      linux
+[debug] [2025-05-15T18:41:24.636Z] Node Version:  v20.16.0
+[debug] [2025-05-15T18:41:24.636Z] Time:          Thu May 15 2025 14:41:24 GMT-0400 (Amazon Standard Time)
+[debug] [2025-05-15T18:41:24.636Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-15T18:41:24.934Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-15T18:41:24.935Z] > authorizing via signed-in user (universalmarketing467@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/zero/Correção-de-Redações-com-IA-Generativa/correcao-redacoes-ia
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-05-15T18:41:56.996Z] Checked if tokens are valid: true, expires at: 1747338015376
+[debug] [2025-05-15T18:41:56.997Z] Checked if tokens are valid: true, expires at: 1747338015376
+[debug] [2025-05-15T18:41:57.000Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-05-15T18:41:57.000Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"redacao-generativa","name":"redacao-generativa"}
+[debug] [2025-05-15T18:41:58.511Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-05-15T18:41:58.511Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.5401539970312778371"}
+[debug] [2025-05-15T18:41:58.513Z] Checked if tokens are valid: true, expires at: 1747338015376
+[debug] [2025-05-15T18:41:58.513Z] Checked if tokens are valid: true, expires at: 1747338015376
+[debug] [2025-05-15T18:41:58.514Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5401539970312778371 [none]
+[debug] [2025-05-15T18:41:59.423Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5401539970312778371 200
+[debug] [2025-05-15T18:41:59.423Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5401539970312778371 {"name":"operations/create_project.global.5401539970312778371"}
+[debug] [2025-05-15T18:41:59.924Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-05-15T18:41:59.925Z] Checked if tokens are valid: true, expires at: 1747338015376
+[debug] [2025-05-15T18:41:59.925Z] Checked if tokens are valid: true, expires at: 1747338015376
+[debug] [2025-05-15T18:41:59.925Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5401539970312778371 [none]
+[debug] [2025-05-15T18:42:00.241Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5401539970312778371 200
+[debug] [2025-05-15T18:42:00.242Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5401539970312778371 {"name":"operations/create_project.global.5401539970312778371","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"596124293575","projectId":"redacao-generativa","lifecycleState":"ACTIVE","name":"redacao-generativa","createTime":"2025-05-15T18:41:59.033831Z"}}
+[debug] [2025-05-15T18:42:00.244Z] Checked if tokens are valid: true, expires at: 1747338015376
+[debug] [2025-05-15T18:42:00.244Z] Checked if tokens are valid: true, expires at: 1747338015376
+[debug] [2025-05-15T18:42:00.245Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/redacao-generativa:addFirebase [none]
+[debug] [2025-05-15T18:42:01.981Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/redacao-generativa:addFirebase 403
+[debug] [2025-05-15T18:42:01.981Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/redacao-generativa:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-05-15T18:42:01.983Z] Request to https://firebase.googleapis.com/v1beta1/projects/redacao-generativa:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2025-05-15T18:42:01.986Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/redacao-generativa:addFirebase had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
