@@ -1,40 +1,26 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from analise_ia import analisar_redacao
-import logging
+from PIL import Image
+import pytesseract
+import io
 
 app = Flask(__name__)
 CORS(app)
-logging.basicConfig(level=logging.DEBUG)
 
 @app.route('/upload', methods=['POST'])
-def upload_image():
-    try:
-        image_file = request.files.get('image')
-        if not image_file:
-            return jsonify({"error": "Nenhuma imagem enviada"}), 400
-        
-        # Processar imagem com OCR (pytesseract) para extrair texto
-        # texto_extraido = ...
+def upload():
+    if 'image' not in request.files:
+        return jsonify({"error": "Nenhuma imagem enviada"}), 400
 
-        # Para teste, usar texto fixo
-        texto_extraido = "Texto de exemplo para análise"
+    image_file = request.files['image']
+    image_bytes = image_file.read()
+    image = Image.open(io.BytesIO(image_bytes))
 
-        analise = analisar_redacao(texto_extraido)
-        return jsonify(analise), 200
+    texto_extraido = pytesseract.image_to_string(image, lang='por')
+    analise = analisar_redacao(texto_extraido)
 
-    except Exception as e:
-        app.logger.error(f"Erro no upload: {e}")
-        return jsonify({"error": "Erro interno no servidor", "message": str(e)}), 500
-
-@app.route('/analyze/<id>')
-def analyze(id):
-    # Recuperar texto salvo por id e analisar
-    pass
-
-@app.route('/')
-def home():
-    return "API Correção de Redações com IA funcionando"
+    return jsonify(analise)
 
 if __name__ == '__main__':
     app.run(debug=True)
