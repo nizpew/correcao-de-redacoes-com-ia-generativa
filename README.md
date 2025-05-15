@@ -65,12 +65,15 @@ Este projeto demonstra minha capacidade de integrar múltiplas tecnologias moder
 
 
 
+# Fotos
+
+![image](https://github.com/user-attachments/assets/89cf2a23-2b20-4b05-ad70-1a22bd552f15)
 
 
 
 
 
-
+## futuras mudancas:
 
 
 [1] Aluno tira foto da redação (escrita à mão)
